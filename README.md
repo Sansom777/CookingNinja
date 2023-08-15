@@ -7,6 +7,7 @@ Upcoming Features:
 
 -Add/Remove recipes to your cook book.
 
+-Added Light/Dark mode toggle to homepage.
 
 -Search for other users cookbooks.
 
