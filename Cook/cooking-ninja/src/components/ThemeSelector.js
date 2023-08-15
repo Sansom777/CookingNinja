@@ -1,7 +1,7 @@
 import { useTheme } from '../hooks/useTheme'
 
 
-//styles
+//styles.
 import './ThemeSelector.css'
 
 const themeColors = ['#58249c', '#249c6b', 'b70233']
