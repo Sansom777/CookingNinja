@@ -20,7 +20,7 @@ export const useFetch = (url, method = "GET") => {
     const controller = new AbortController()
 
     const fetchData = async (fetchOptions) => {
-      setIsPending(true)
+     
       
       try {
         const res = await fetch(url, { ...fetchOptions, signal: controller.signal })
@@ -29,25 +29,32 @@ export const useFetch = (url, method = "GET") => {
         }
         const data = await res.json()
 
-        setIsPending(false)
+       
         setData(data)
         setError(null)
       } catch (err) {
         if (err.name === "AbortError") {
           console.log("the fetch was aborted")
         } else {
-          setIsPending(false)
+          
           setError('Could not fetch the data')
         }
       }
     }
 
     // invoke the function
+
     if (method === "GET") {
-      fetchData()
+      setIsPending(true)
+      fetchData().finally(() => {
+        setIsPending(false)
+      })
     }
     if (method === "POST" && options) {
-      fetchData(options)
+      setIsPending(true)
+      fetchData(options).finally(() => {
+        setIsPending(false)
+      })
     }
 
     return () => {

@@ -9,6 +9,7 @@ export default function Recipe() {
   const url = 'http://localhost:3000/recipes/' + id
   const { error, isPending, data: recipe } = useFetch(url)
   const { mode } = useTheme()
+  console.log(isPending)
   return (
     <div className={`recipe ${mode}`}>
       {error && <p className="error">{error}</p>}
