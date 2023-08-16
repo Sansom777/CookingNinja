@@ -45,6 +45,15 @@
       "method": "Boil",
       "cookingTime": "15 minutes",
       "id": "8B4AMAO"
+    },
+    {
+      "title": "Brownies",
+      "ingredients": [
+        "Flour, eggs, sugar, vanilla, salt, butter, chocolate"
+      ],
+      "method": "Bake",
+      "cookingTime": "30 minutes",
+      "id": "DSRaBs-"
     }
   ]
 }
