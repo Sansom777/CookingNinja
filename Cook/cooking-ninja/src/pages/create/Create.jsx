@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useFetch } from '../../hooks/useFetch'
 import { useHistory } from 'react-router-dom'
+import React from 'react'; 
 
 // styles
 import './Create.css'
