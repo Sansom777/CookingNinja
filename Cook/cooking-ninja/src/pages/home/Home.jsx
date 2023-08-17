@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { getRecipes } from '../../firebase/config'
 import RecipeList from '../../components/RecipeList'
 import React from 'react'; 
+
 // styles
 import './Home.css'
 

@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import React from 'react'; 
 
 // styles
-import './Searchbar.css'
+// import './Searchbar.css'
 
 export default function Searchbar() {
   const [term, setTerm] = useState('')
