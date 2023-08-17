@@ -1,5 +1,6 @@
 import { useTheme } from "../hooks/useTheme"
 import modeIcon from '../assets/mode-icon.png'
+import React from 'react'; 
 
 // styles
 import './ThemeSelector.css'

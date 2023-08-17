@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { useTheme } from './hooks/useTheme'
+import React from 'react'; 
 
 // page components
 import Navbar from './components/Navbar'

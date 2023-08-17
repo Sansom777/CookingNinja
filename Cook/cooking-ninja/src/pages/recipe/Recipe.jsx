@@ -1,15 +1,33 @@
 import { useParams } from 'react-router-dom'
-import { useFetch } from '../../hooks/useFetch'
 import { useTheme } from '../../hooks/useTheme'
+import { useState, useEffect } from 'react'
+import { getRecipes } from '../../firebase/config'
+import React from 'react'; 
 // styles
 import './Recipe.css'
 
 export default function Recipe() {
   const { id } = useParams()
-  const url = 'http://localhost:3000/recipes/' + id
-  const { error, isPending, data: recipe } = useFetch(url)
   const { mode } = useTheme()
-  console.log(isPending)
+
+  const [isPending, setIsPending] = useState(false)
+  const [data, setData] = useState(null)
+  const [error, setError] = useState(null)
+  const [recipe, setRecipe] = useState(null)
+
+  useEffect(async () => {
+    try {
+      setIsPending(true)
+      const recipes = await getRecipes()
+      setData(recipes)
+    } catch (error) {
+      setError(error.message)
+      throw new Error(error)
+    } finally {
+      setIsPending(false)
+    }
+  }, [id])
+
   return (
     <div className={`recipe ${mode}`}>
       {error && <p className="error">{error}</p>}

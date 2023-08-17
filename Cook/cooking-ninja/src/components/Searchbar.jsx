@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+import React from 'react'; 
 
 // styles
 import './Searchbar.css'
