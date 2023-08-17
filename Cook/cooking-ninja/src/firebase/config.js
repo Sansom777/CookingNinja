@@ -26,3 +26,4 @@ export async function getRecipes() {
   return recipeList
 }
 
+export { getFirestore, collection, getDocs }

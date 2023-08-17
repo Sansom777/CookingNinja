@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
 import React from 'react'
 // styles
-import './Navbar.css'
+// import './Navbar.css'
 import Searchbar from './Searchbar'
 
 export default function Navbar() {
